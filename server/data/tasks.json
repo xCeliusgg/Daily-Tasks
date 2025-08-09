@@ -1,0 +1,78 @@
+{
+  "tasks": [
+    {
+      "id": "1754759460412",
+      "title": "NeoPat",
+      "description": "",
+      "priority": "high",
+      "completed": true,
+      "createdAt": "2025-08-09T17:11:00.412Z",
+      "completedAt": "2025-08-09T17:11:03.646Z"
+    },
+    {
+      "id": "1754759505423",
+      "title": "be productive",
+      "description": "",
+      "priority": "high",
+      "completed": true,
+      "createdAt": "2025-08-09T17:11:45.423Z",
+      "completedAt": "2025-08-09T17:13:02.579Z"
+    },
+    {
+      "id": "1754759543766",
+      "title": "water glass 1",
+      "description": "",
+      "priority": "medium",
+      "completed": true,
+      "createdAt": "2025-08-09T17:12:23.766Z",
+      "completedAt": "2025-08-09T17:12:53.701Z"
+    },
+    {
+      "id": "1754759549165",
+      "title": "water glass 2",
+      "description": "",
+      "priority": "medium",
+      "completed": true,
+      "createdAt": "2025-08-09T17:12:29.165Z",
+      "completedAt": "2025-08-09T17:12:55.181Z"
+    },
+    {
+      "id": "1754759553583",
+      "title": "water glass 3",
+      "description": "",
+      "priority": "medium",
+      "completed": true,
+      "createdAt": "2025-08-09T17:12:33.583Z",
+      "completedAt": "2025-08-09T17:12:56.829Z"
+    },
+    {
+      "id": "1754759561689",
+      "title": "water glass 4",
+      "description": "",
+      "priority": "medium",
+      "completed": false,
+      "createdAt": "2025-08-09T17:12:41.689Z",
+      "completedAt": null
+    },
+    {
+      "id": "1754759566204",
+      "title": "water glass 5",
+      "description": "",
+      "priority": "medium",
+      "completed": false,
+      "createdAt": "2025-08-09T17:12:46.204Z",
+      "completedAt": null
+    },
+    {
+      "id": "1754759569555",
+      "title": "water glass 6",
+      "description": "",
+      "priority": "medium",
+      "completed": false,
+      "createdAt": "2025-08-09T17:12:49.555Z",
+      "completedAt": null
+    }
+  ],
+  "lastReset": "2025-08-09",
+  "history": []
+}
