@@ -24,6 +24,7 @@ function App() {
     fetchStats();
 
     // Set up interval to check for daily reset every minute
+    // This checks if the server has performed a daily reset and refreshes the page
     const interval = setInterval(() => {
       checkDailyReset();
     }, 60000); // Check every minute
@@ -59,12 +60,13 @@ function App() {
   };
 
   // Function to check if daily reset is needed
+  // This monitors the server for daily resets and refreshes the page when needed
   const checkDailyReset = async () => {
     try {
       const response = await axios.get(`${API_BASE}/api/tasks`);
       const currentLastReset = response.data.lastReset;
 
-      // If last reset date changed, refresh the page to get new tasks
+      // If last reset date changed, refresh the page to get updated task statuses
       if (currentLastReset !== lastReset && lastReset !== "") {
         window.location.reload();
       }
@@ -258,8 +260,11 @@ function App() {
       <div className="tasks-container">
         {tasks.length === 0 ? (
           <div className="empty-state">
-            <p>No tasks for today! 🎉</p>
-            <p>Add your first task above to get started.</p>
+            <p>No tasks yet! 🎉</p>
+            <p>
+              Add your first task above to get started. Tasks will persist
+              daily.
+            </p>
           </div>
         ) : (
           <div className="tasks-list">
@@ -330,10 +335,13 @@ function App() {
       {/* Footer with daily reset information */}
       <footer className="footer">
         <p>
-          Tasks reset daily at midnight. Last reset:{" "}
+          Task completion status resets daily at midnight. Last reset:{" "}
           {lastReset ? formatDate(lastReset) : "Today"}
         </p>
-        <p>Your data is saved locally and will persist between sessions.</p>
+        <p>
+          Your tasks persist daily - only completion status resets. Data is
+          saved locally.
+        </p>
       </footer>
     </div>
   );

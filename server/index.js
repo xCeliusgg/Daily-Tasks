@@ -61,6 +61,9 @@ function writeTasks(data) {
 }
 
 // Function to check if daily reset is needed
+// IMPORTANT: This function now preserves tasks but resets their completion status
+// Instead of clearing all tasks daily, it keeps the task list persistent
+// and only marks all tasks as incomplete at midnight
 function checkDailyReset() {
   const data = readTasks();
   const today = new Date().toISOString().split("T")[0]; // Current date in YYYY-MM-DD format
@@ -82,8 +85,13 @@ function checkDailyReset() {
       }
     }
 
-    // Reset tasks for new day
-    data.tasks = [];
+    // Instead of clearing tasks, keep them but mark all as incomplete
+    // This allows users to have persistent daily tasks that reset completion status
+    data.tasks.forEach((task) => {
+      task.completed = false;
+      task.completedAt = null;
+    });
+
     data.lastReset = today;
 
     // Save the updated data
